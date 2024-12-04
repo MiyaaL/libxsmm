@@ -84,6 +84,16 @@
      &    LIBXSMM_DATATYPE_UNSIGNED     = 10,                           &
      &    LIBXSMM_DATATYPE_UNSUPPORTED  = 11
 
+        ! Denotes the precision/data type of GEMM (for weak-typed
+        ! interface functions such as libxsmm_xmmdispatch).
+        INTEGER(C_INT), PARAMETER ::                                    &
+     &    LIBXSMM_GEMM_PRECISION_F64  = LIBXSMM_DATATYPE_F64,           &
+     &    LIBXSMM_GEMM_PRECISION_F32  = LIBXSMM_DATATYPE_F32,           &
+     &    LIBXSMM_GEMM_PRECISION_BF16 = LIBXSMM_DATATYPE_BF16,          &
+     &    LIBXSMM_GEMM_PRECISION_I32  = LIBXSMM_DATATYPE_I32,           &
+     &    LIBXSMM_GEMM_PRECISION_I16  = LIBXSMM_DATATYPE_I16,           &
+     &    LIBXSMM_GEMM_PRECISION_I8   = LIBXSMM_DATATYPE_I8
+
         !> Enumeration of prefetch strategies which can be IORed.
         INTEGER(C_INT), PARAMETER ::                                    &
           ! Automatically select strategy (frontend).
